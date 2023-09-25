@@ -69,17 +69,15 @@ import {
 } from '@remix-run/react';
 import { withEmotionCache } from '@emotion/react';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
-import { light as theme } from '~/old-app/theme';
+import { light as theme } from '~/mui/theme';
 import ClientStyleContext from '~/mui/ClientStyleContext';
 
 import Nav from '~/components/nav';
 import Footer from '~/components/footer';
 
-import FooterStyles from '~/old-app/components/NewFooter/NewFooter.css';
-import IndexStyles from '~/old-app/index.css';
+import IndexStyles from '~/styles.css';
 
 export const links = () => [
-  { rel: 'stylesheet', href: FooterStyles },
   { rel: 'stylesheet', href: IndexStyles },
 ];
 export const loader = async () => {
