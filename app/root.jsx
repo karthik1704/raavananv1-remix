@@ -81,7 +81,7 @@ export const links = () => [
   { rel: 'stylesheet', href: IndexStyles },
 ];
 export const loader = async () => {
-  const res = await fetch('http://localhost:8000/api/category/');
+  const res = await fetch(`${process.env.API_URL}/api/category/`);
   const category = await res.json();
   return {
     category
